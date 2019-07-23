@@ -46,4 +46,5 @@ public interface CatService
 	public void declarationInsert(Map<String, Object> map);
 	
 	public List<Map<String, Object>> representationCat(String id);
+	public int representationCatCount(String id);
 }

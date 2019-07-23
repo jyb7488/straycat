@@ -40,6 +40,8 @@ public interface CatDAO
 	public List<Map<String, Object>> selectListList(String id);
 	
 	public List<Map<String, Object>> selectListListList(String id);
+	
+	public int selectCount(String id, Object value);
     
      
 	

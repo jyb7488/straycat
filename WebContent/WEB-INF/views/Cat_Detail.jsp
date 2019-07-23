@@ -98,7 +98,7 @@
 				<img src="<%=cp %>/img/plus-button.png" class="img2"><span class="followInfo">${catInfo.FOLLOW }</span>
 			</div>
 			<div class="col-6 text-left">
-				<img src="<%=cp %>/img/user.png" class="img2"> 집사
+				<img src="<%=cp %>/img/user.png" class="img2"><span class="followInfo">${representationCatCount}</span>
 			</div>
 		</div><br>
 		<div class="row">
@@ -576,7 +576,7 @@
 							str += "							<div class='row'>";
 							
 									str += "										<div class='col-4 imgContain'>";
-									str += "											<img src='/FinalPrj/" + data[i].ACT_IMG + "' class='actImg'>";
+									str += "											<img src='<%=cp%>" + data[i].ACT_IMG + "' class='actImg'>";
 									str += "										</div>";
 							str += "					<div class='col-8'>";
 							str += "						<span>" + data[i].CONTENT + "</span>";

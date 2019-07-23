@@ -98,6 +98,22 @@ public class CatServiceImpl implements CatService
 	}
 	
 	@Override
+	public int representationCatCount(String id)
+	{
+		int representationCatCount = 0;
+		
+		try
+		{
+			representationCatCount = dao.selectCount("catDetail.representationCatCount", id);
+		} catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return representationCatCount;
+	}
+	
+	@Override
 	public List<Map<String, Object>> representationCat(String id)
 	{
 		List<Map<String, Object>> representationCat = null;

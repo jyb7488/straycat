@@ -24,9 +24,9 @@
 				LEFT JOIN CAT_STATUS CST 
 			ON C.CAT_STATUS = CST.STATUS_CODE 
 		WHERE AD.GU = #{gu} AND AD.DONG = #{dong}  
-		<![CDATA[
+<!-- 		<![CDATA[
 		AND ROWNUM <= 10
-		]]>  
+		]]>   -->
 		ORDER BY C.CAT_DATE
 	</select>
 

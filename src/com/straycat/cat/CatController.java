@@ -96,6 +96,7 @@ public class CatController
 		List<Map<String, Object>> catActReg = service.catActReg(id);
 		List<Map<String, Object>> actGalList = service.actGalList(id);	
 		List<Map<String, Object>> representationCat = service.representationCat(id);
+		int representationCatCount = service.representationCatCount(id);
 		
 		Map<String, String> catCode = new HashMap<String, String>();
 		catCode.put("cat_code", id);
@@ -121,6 +122,7 @@ public class CatController
 		model.addAttribute("result",result);
 		model.addAttribute("actGalList",actGalList);
 		model.addAttribute("representationCat", representationCat);
+		model.addAttribute("representationCatCount", representationCatCount);
 
 		return "Cat_Detail";
 	}
@@ -343,9 +345,6 @@ public class CatController
 		 Map<String, Object> map = new HashMap<String, Object>();
 		 map.put("declarationSelect",request.getParameter("declarationSelect"));
 		 map.put("declarationContent",request.getParameter("declarationContent"));
-		 
-		 System.out.println("★★★★★★★★★★★★★★"+request.getParameter("declarationSelect"));
-		 System.out.println("★★★★★★★★★★★★★★"+request.getParameter("declarationContent"));
 		 
 		 service.declarationInsert(map);
 		 

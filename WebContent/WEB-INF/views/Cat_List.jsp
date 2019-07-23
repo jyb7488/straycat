@@ -31,7 +31,6 @@
 		
 		dongList("${dongString}");
 		
-		
 		<%-- $.ajax({
 			url : "<c:url value=''>",
 			type : "post",
@@ -157,6 +156,7 @@
 						<div class="card-body">
 							<!-- 고양이 이름 -->
 							<h5 class="card-title">${list.CAT_NAME }</h5>
+							<input type="hidden" data-bno="${list.CAT_CODE}">
 							<!-- 고양이 정보 -->
 							<div class="card-text">
 								<ul class="cat-info-list">

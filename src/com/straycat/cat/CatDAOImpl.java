@@ -116,6 +116,22 @@ public class CatDAOImpl implements CatDAO
 	}
 
 	@Override
+	public int selectCount(String id, Object value)
+	{
+		try
+		{
+			return sqlSession.selectOne(id, value);
+			
+		} catch (Exception e)
+		{
+			logger.error(e.toString());
+			
+			throw e;
+		}
+	}
+
+	
+	@Override
 	public List<Map<String, Object>> selectList(String id)
 	{
 		

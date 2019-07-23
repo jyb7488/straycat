@@ -112,4 +112,11 @@ insert into report_list(report_code, report_type_code, report_content, user_code
     WHERE CAT_CODE = #{cat_code}
 </select>
 
+<select id="representationCatCount" resultType="java.lang.Integer">
+	SELECT COUNT(DISTINCT US.USER_CODE) AS COUNT
+    FROM ACT_REG AR JOIN USER_REG US
+    ON AR.USER_CODE = US.USER_CODE
+    WHERE CAT_CODE = #{cat_code}
+</select>
+
 </mapper>
